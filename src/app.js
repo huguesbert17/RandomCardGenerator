@@ -8,11 +8,22 @@ const signs = ["♠", "♦", "♣", "♥"],
 
 window.onload = function() {
   //write your code here
-  document.querySelector(".game-card").innerHTML = createCard();
+  createCard();
+  document.querySelector(".card-wrapper").innerHTML =
+    '<button class="btn btn-light mt-4">Generate another</button>';
+  document.getElementById("game").addEventListener("click", function(e) {
+    if (e.target.tagName === "BUTTON") {
+      createCard();
+    }
+  });
 };
 
 function createCard() {
-  return cardTemplate(random(colors), random(signs), random(cards));
+  document.querySelector(".game-card").innerHTML = cardTemplate(
+    random(colors),
+    random(signs),
+    random(cards)
+  );
 }
 
 function cardTemplate(color, sign, number) {
