@@ -1,1 +1,73 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap");
+.game-card {
+  width: 200px;
+  height: 307px;
+  border-radius: 10px;
+  background: #fff;
+  position: relative;
+  font-family: Comfortaa;
+}
+.corner {
+  line-height: 1;
+  position: absolute;
+  text-align: center;
+  pointer-events: none;
+}
+.top {
+  left: 0.64em;
+  top: 0.96em;
+}
+.bottom {
+  bottom: 0.96em;
+  right: 0.64em;
+  -ms-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.card-number {
+  font-size: 3em;
+  display: block;
+  font-size: 2em;
+  font-weight: bold;
+  width: 1em;
+  text-align: center;
+}
+.sign {
+  display: block;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 4px;
+}
+.middle {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+}
+.card-red {
+  color: red;
+}
+.skeleton .card-number {
+  height: 32px;
+  width: 32px;
+  border-radius: 5px;
+}
+.skeleton .sign {
+  width: 32px;
+  height: 19px;
+  border-radius: 5px;
+}
+.skeleton .skeleton-item {
+  animation: pulse 700ms infinite alternate;
+}
+@keyframes pulse {
+  from {
+    background-color: #dddddd;
+  }
+  to {
+    background-color: #eeeeee;
+  }
+}
